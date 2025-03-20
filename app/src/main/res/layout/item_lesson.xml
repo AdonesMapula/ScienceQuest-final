@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="8dp"
+    app:cardCornerRadius="19.63dp"
+    android:layout_marginBottom="8dp">
+
+    <LinearLayout
+        android:id="@+id/itemLessonContainer"
+        android:background="@drawable/bio_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:src="@drawable/play_ic"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="16dp"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/lessonNumber"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Lesson 1"-->
+<!--            android:textSize="10sp"-->
+<!--            android:textColor="#757575"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:fontFamily="@font/montserrat_medium" />-->
+
+        <TextView
+            android:id="@+id/lessonTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lesson Title"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_semibold" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/lessonDescription"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Lesson Description"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textColor="#757575"-->
+<!--            android:fontFamily="@font/montserrat_medium" />-->
+
+        <TextView
+            android:id="@+id/lessonProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100%"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserratalternates_semibold"/>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

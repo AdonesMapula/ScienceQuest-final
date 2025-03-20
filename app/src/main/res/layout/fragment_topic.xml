@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="16dp">
+
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="TODO"
+            android:src="@drawable/backbtn_foreground" />
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/montserratalternates_semibold"
+            android:text="Topics"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginRight="50dp"
+            android:layout_gravity="bottom"
+            android:textColor="@color/black33"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="16dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:background="@drawable/bio_item_bg"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@android:color/transparent"
+            app:cardCornerRadius="20dp"
+            android:layout_height="150dp">
+
+            <LinearLayout
+                android:id="@+id/bannerBg"
+                android:background="@color/blueButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/categoryTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Category:"
+                    android:fontFamily="@font/montserratalternates_bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/fieldDescTv"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:text="Topics"
+                    android:fontFamily="@font/montserratalternates_semibold"
+                    android:textSize="17sp"
+                    android:textColor="@color/white" />
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/fieldImg"
+            android:layout_width="138dp"
+            android:layout_height="190dp"
+            android:elevation="8dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/big_microscope"/>
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/topicRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

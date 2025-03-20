@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blueButton"
+    tools:context=".User.Quiz.QuizSelection.QuizDetailFragment">
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="600dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hexagon_bg"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="-200dp"/>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp"
+            android:paddingBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="60dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="TODO"
+                android:src="@drawable/backbtn_foreground"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/montserratalternates_semibold"
+                android:text="Quizzes"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:layout_marginRight="16dp"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/quizTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratalternates_semibold"
+            android:text="Ready to practice?"
+            android:textColor="@color/white"
+            android:textSize="31sp"
+            android:layout_marginTop="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <TextView
+            android:id="@+id/quizDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratalternates_regular"
+            android:text="Okay, show us what you can do!"
+            android:textColor="@color/white"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quizTitle" />
+
+        <TextView
+            android:id="@+id/numQuestions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratalternates_semibold"
+            android:text="10 Questions"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quizDescription" />
+
+
+
+        <Button
+            android:id="@+id/startQuizButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="@color/yellowMain"
+            android:text="Start Quiz"
+            app:cornerRadius="10dp"
+            android:paddingVertical="12dp"
+            android:fontFamily="@font/montserratalternates_semibold"
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>

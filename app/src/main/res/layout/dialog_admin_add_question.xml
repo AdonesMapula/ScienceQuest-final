@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/white_bg"
+    android:padding="16dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Question"
+        android:alpha=".8"
+        android:textColorHint="@color/black33"
+        app:boxStrokeErrorColor="@color/red"
+        app:errorEnabled="false"
+        app:errorIconDrawable="@null"
+        app:errorTextColor="@color/red"
+        app:startIconTint="@null">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratalternates_semibold"
+            android:imeOptions="actionNext"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:gravity="top"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupQuestionType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/radioButtonMultipleChoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:buttonTint="@color/colorPrimary"
+            android:fontFamily="@font/montserratalternates_semibold"
+            android:textColor="@color/black33"
+            android:layout_marginRight="4dp"
+            android:text="Multiple Choice" />
+
+        <RadioButton
+            android:id="@+id/radioButtonTrueFalse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:buttonTint="@color/colorPrimary"
+            android:fontFamily="@font/montserratalternates_semibold"
+            android:textColor="@color/black33"
+            android:text="True/False" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/layoutMultipleChoiceOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Option 1"
+            android:alpha=".8"
+            android:textColorHint="@color/black33"
+            app:boxStrokeErrorColor="@color/red"
+            app:errorEnabled="false"
+            app:errorIconDrawable="@null"
+            app:errorTextColor="@color/red"
+            app:startIconTint="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextOption1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratalternates_semibold"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:lines="2"
+                android:gravity="top"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Option 2"
+            android:alpha=".8"
+            android:textColorHint="@color/black33"
+            app:boxStrokeErrorColor="@color/red"
+            app:errorEnabled="false"
+            app:errorIconDrawable="@null"
+            app:errorTextColor="@color/red"
+            app:startIconTint="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextOption2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratalternates_semibold"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:lines="2"
+                android:gravity="top"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Option 3"
+            android:alpha=".8"
+            android:textColorHint="@color/black33"
+            app:boxStrokeErrorColor="@color/red"
+            app:errorEnabled="false"
+            app:errorIconDrawable="@null"
+            app:errorTextColor="@color/red"
+            app:startIconTint="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextOption3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratalternates_semibold"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:lines="2"
+                android:gravity="top"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Option 4"
+            android:alpha=".8"
+            android:textColorHint="@color/black33"
+            app:boxStrokeErrorColor="@color/red"
+            app:errorEnabled="false"
+            app:errorIconDrawable="@null"
+            app:errorTextColor="@color/red"
+            app:startIconTint="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextOption4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratalternates_semibold"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:lines="2"
+                android:gravity="top"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Correct Answer"
+        android:alpha=".8"
+        android:textColorHint="@color/black33"
+        app:boxStrokeErrorColor="@color/red"
+        app:errorEnabled="false"
+        app:errorIconDrawable="@null"
+        app:errorTextColor="@color/red"
+        app:startIconTint="@null">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextCorrectAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratalternates_semibold"
+            android:imeOptions="actionNext"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:gravity="top"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonAddQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Add Question"
+        android:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="20dp"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

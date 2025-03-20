@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/textViewQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/black33"
+        android:fontFamily="@font/montserratalternates_semibold"/>
+
+    <TextView
+        android:id="@+id/textViewOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/black33"
+        android:alpha=".8"
+        android:fontFamily="@font/montserratalternates_medium"
+        android:layout_marginTop="4dp"/>
+
+        <Button
+            android:id="@+id/buttonDeleteQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/blueButton"
+            android:text="Delete"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp" />
+
+
+</LinearLayout>

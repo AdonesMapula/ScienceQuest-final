@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Science Quest</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="default_web_client_id">245211516480-7ftv22h39d31lh70c097eauqgv0orhip.apps.googleusercontent.com</string>
+    <string name="LoremIpsum">Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur</string>
+    <string name="google_api_key">AIzaSyAPCsC4nmXIE8J4dGVihiRxXHZ435Fs_cI</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+
+
+    <string name="lesson_icon">Lesson Icon</string>
+    <string name="navigation_button">Navigation Button</string>
+    <string name="complete_button_text">Complete</string>
+
+    <string-array name="filter_options">
+        <item>All</item>
+        <item>Biology</item>
+        <item>Physics</item>
+        <item>Chemistry</item>
+        <item>Astrology</item>
+    </string-array>
+
+
+</resources>

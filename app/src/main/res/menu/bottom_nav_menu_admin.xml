@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/adminHomeFragment"
+        android:icon="@drawable/home_ic2"
+        android:title="Home"
+        />
+    <item
+        android:id="@+id/adminLessonListFragment"
+        android:icon="@drawable/add_lesson_ic"
+        android:title="Add Lessons"
+        />
+
+    <item
+        android:id="@+id/adminQuizListFragment"
+        android:icon="@drawable/add_quiz_ic"
+        android:title="Add Quiz"
+        />
+
+    <item
+        android:id="@+id/adminProfileFragment"
+        android:icon="@drawable/profile_ic2"
+        android:title="Profile"
+        />
+
+
+</menu>

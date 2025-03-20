@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/app_widget_description"
+    android:initialKeyguardLayout="@layout/my_app_widget_provider"
+    android:initialLayout="@layout/my_app_widget_provider"
+    android:minWidth="40dp"
+    android:minHeight="40dp"
+    android:previewImage="@drawable/example_appwidget_preview"
+    android:previewLayout="@layout/my_app_widget_provider"
+    android:resizeMode="horizontal|vertical"
+    android:targetCellWidth="1"
+    android:targetCellHeight="1"
+    android:updatePeriodMillis="86400000"
+    android:widgetCategory="home_screen" />
+
+<appwidget-provider
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="250dp"
+    android:minHeight="100dp"
+    android:updatePeriodMillis="3600000"
+    android:previewImage="@drawable/widget_preview"
+    android:initialLayout="@layout/widget_layout"
+    android:resizeMode="horizontal|vertical" />-->
+
+
+
+<appwidget-provider
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:minWidth="110dp"
+  android:minHeight="60dp"
+  android:updatePeriodMillis="1800000"
+  android:previewImage="@layout/my_app_widget_provider"
+  android:initialLayout="@layout/my_app_widget_provider"
+  android:resizeMode="horizontal|vertical"
+  android:widgetCategory="home_screen"/>
+
+

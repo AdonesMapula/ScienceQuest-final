@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Nasa.NasaHomePage"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/spaceImageryExporationBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Space Imagery Exploration "/>
+
+    <Button
+        android:id="@+id/nasaApodBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Astronomy Picture of the Day"/>
+
+    <Button
+        android:id="@+id/solarSystemExplorerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Solar System Explorer (Exoplanet Archive)"/>
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    android:background="@color/blueButton">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/cyan600">
+
+        <!-- Microscope Icon -->
+        <ImageView
+            android:id="@+id/continueLearningIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/big_microscope"
+            android:contentDescription="Microscope Icon" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/continueLearningTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biology"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/continueLearningDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exploring Life and Living Systems"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:layout_below="@id/continueLearningTitle"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Progress Percentage -->
+        <TextView
+            android:id="@+id/continueLearningProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="87%"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_below="@id/continueLearningDescription"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Continue Button -->
+        <Button
+            android:id="@+id/continueLearningButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Continue"
+            android:textSize="14sp"
+            android:backgroundTint="@color/yellowMain"
+            android:textColor="@android:color/black"
+            android:layout_below="@id/continueLearningProgress"
+            android:layout_marginTop="8dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

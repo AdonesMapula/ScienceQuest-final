@@ -1,0 +1,554 @@
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <!-- Login Fragment -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.sciencequest.Login.LoginFragment"
+        android:label="LoginFragment">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_adminHomeFragment"
+            app:destination="@id/adminHomeFragment" />
+    </fragment>
+
+    <!-- Forgot Password Fragment -->
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.sciencequest.Login.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment">
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <!-- Signup Fragment -->
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.sciencequest.Login.SignupFragment"
+        android:label="SignupFragment">
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+
+        <action
+            android:id="@+id/action_signupFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <!-- Lesson Home Fragment -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.sciencequest.User.Home.HomeFragment"
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_lessonLibraryFragment"
+            app:destination="@id/lessonLibraryFragment"/>
+
+        <action
+            android:id="@+id/action_homeFragment_to_topicFragment"
+            app:destination="@id/topicFragment">
+            <!-- Pass category to TopicFragment -->
+            <argument
+                android:name="category"
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/action_homeFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_rankingFragment"
+            app:destination="@id/rankingFragment" />
+
+
+    </fragment>
+
+    <!-- Lesson Library Fragment -->
+    <fragment
+        android:id="@+id/lessonLibraryFragment"
+        android:name="com.example.sciencequest.User.LessonLibrary.LessonLibraryFragment"
+        android:label="LessonLibraryFragment">
+        <action
+            android:id="@+id/action_lessonLibraryFragment_to_topicFragment"
+            app:destination="@id/topicFragment">
+            <!-- Pass category to TopicFragment -->
+            <argument
+                android:name="category"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_lessonLibraryFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <!-- Topic Fragment -->
+    <fragment
+        android:id="@+id/topicFragment"
+        android:name="com.example.sciencequest.User.LessonLibrary.TopicFragment"
+        android:label="TopicFragment">
+        <action
+            android:id="@+id/action_topicFragment_to_lessonListFragment"
+            app:destination="@id/lessonListFragment">
+            <argument
+                android:name="category"
+                app:argType="string" />
+            <argument
+                android:name="topic"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_topicFragment_to_lessonLibraryFragment"
+            app:destination="@id/lessonLibraryFragment" />
+    </fragment>
+
+    <!-- Lesson List Fragment -->
+    <fragment
+        android:id="@+id/lessonListFragment"
+        android:name="com.example.sciencequest.User.LessonLibrary.LessonListFragment"
+        android:label="LessonListFragment">
+        <action
+            android:id="@+id/action_lessonListFragment_to_lessonDetailFragment"
+            app:destination="@id/lessonDetailsFragment">
+            <argument
+                android:name="lessonId"
+                app:argType="string" />
+            <argument
+                android:name="category"
+                app:argType="string" />
+            <argument
+                android:name="topic"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_lessonListFragment_to_topicFragment"
+            app:destination="@id/topicFragment" />
+
+    </fragment>
+
+    <!-- Lesson Detail Fragment -->
+    <fragment
+        android:id="@+id/lessonDetailsFragment"
+        android:name="com.example.sciencequest.User.LessonLibrary.LessonDetailsFragment"
+        android:label="LessonDetailsFragment">
+        <argument
+            android:name="lessonId"
+            app:argType="string" />
+        <argument
+            android:name="topic"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_lessonDetailsFragment_to_lessonListFragment"
+            app:destination="@id/lessonListFragment" />
+        <action
+            android:id="@+id/action_lessonDetailsFragment_to_simulationFragment"
+            app:destination="@id/simulationFragment">
+
+            <argument
+                android:name="simulationUrl"
+                app:argType="string"/>
+
+            <argument
+                android:name="lessonId"
+                app:argType="string"/>
+
+            <argument
+                android:name="topic"
+                app:argType="string"/>
+
+            <argument
+                android:name="category"
+                app:argType="string"/>
+
+            <argument
+                android:name="quizId"
+                app:argType="string"/>
+
+
+
+        </action>
+        <action
+            android:id="@+id/action_lessonDetailsFragment_to_quizDetailFragment"
+            app:destination="@id/quizDetailFragment" >
+            <argument
+                android:name="quizId"
+                app:argType="string"/>
+            <argument
+                android:name="lessonId"
+                app:argType="string"/>
+
+            <argument
+                android:name="topic"
+                app:argType="string"/>
+
+            <argument
+                android:name="category"
+                app:argType="string"/>
+
+            <argument
+                android:name="from"
+                app:argType="string"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminHomeFragment"
+        android:name="com.example.sciencequest.Admin.HomeAdmin.AdminHomeFragment"
+        android:label="AdminHomeFragment" >
+        <action
+            android:id="@+id/action_adminHomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/simulationFragment"
+        android:name="com.example.sciencequest.User.LessonLibrary.PhETInteractiveSimulations.SimulationFragment"
+        android:label="SimulationFragment" >
+        <action
+            android:id="@+id/action_simulationFragment_to_quizDetailFragment"
+            app:destination="@id/quizDetailFragment">
+            <argument
+                android:name="quizId"
+                app:argType="string"/>
+            <argument
+                android:name="lessonId"
+                app:argType="string"/>
+
+            <argument
+                android:name="topic"
+                app:argType="string"/>
+
+            <argument
+                android:name="category"
+                app:argType="string"/>
+
+            <argument
+                android:name="from"
+                app:argType="string"/>
+        </action>
+        <action
+            android:id="@+id/action_simulationFragment_to_lessonDetailsFragment"
+            app:destination="@id/lessonDetailsFragment">
+            <argument
+                android:name="lessonId"
+                app:argType="string"/>
+
+            <argument
+                android:name="topic"
+                app:argType="string"/>
+
+            <argument
+                android:name="category"
+                app:argType="string"/>
+        </action>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/adminProfileFragment"
+        android:name="com.example.sciencequest.Admin.ProfileAdmin.AdminProfileFragment"
+        android:label="AdminProfileFragment" >
+        <action
+            android:id="@+id/action_adminProfileFragment_to_adminProfileEditFragment"
+            app:destination="@id/adminProfileEditFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminProfileEditFragment"
+        android:name="com.example.sciencequest.Admin.ProfileAdmin.AdminProfileEditFragment"
+        android:label="AdminProfileEditFragment" >
+        <action
+            android:id="@+id/action_adminProfileEditFragment_to_adminProfileFragment"
+            app:destination="@id/adminProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.sciencequest.User.Profile.ProfileFragment"
+        android:label="UserProfileFragment" >
+        <action
+            android:id="@+id/action_userProfileFragment_to_simulationFragment"
+            app:destination="@id/simulationFragment" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_lessonDetailsFragment"
+            app:destination="@id/lessonDetailsFragment" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_achievementsBadgesFragment"
+            app:destination="@id/achievementsBadgesFragment" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_profileEditFragment"
+            app:destination="@id/profileEditFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileEditFragment"
+        android:name="com.example.sciencequest.User.Profile.ProfileEditFragment"
+        android:label="ProfileEditFragment" >
+        <action
+            android:id="@+id/action_profileEditFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/quizSelectionFragment"
+        android:name="com.example.sciencequest.User.Quiz.QuizSelection.QuizSelectionFragment"
+        tools:layout="@layout/fragment_quiz_selection" >
+
+        <action
+            android:id="@+id/action_quizSelectionFragment_to_quizzesFragment"
+            app:destination="@id/quizzesFragment" >
+            <argument
+                android:name="selectedFilter"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_quizSelectionFragment_to_quizDetailFragment"
+            app:destination="@id/quizDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quizDetailFragment"
+        android:name="com.example.sciencequest.User.Quiz.QuizSelection.QuizDetailFragment"
+        tools:layout="@layout/fragment_quiz_detail">
+        <argument
+            android:name="quizId"
+            app:argType="string" />
+
+        <argument
+            android:name="lessonId"
+            app:argType="string"
+            android:defaultValue=""/>
+
+        <argument
+            android:name="topic"
+            app:argType="string"/>
+
+        <argument
+            android:name="category"
+            app:argType="string"/>
+
+        <argument
+            android:name="from"
+            app:argType="string"/>
+
+
+
+        <action
+            android:id="@+id/action_quizDetailFragment_to_quizFragment"
+            app:destination="@id/quizFragment">
+            <argument
+                android:name="quizId"
+                app:argType="string" />
+
+            <argument
+                android:name="lessonId"
+                app:argType="string"/>
+
+            <argument
+                android:name="topic"
+                app:argType="string"/>
+
+            <argument
+                android:name="category"
+                app:argType="string"/>
+
+            <argument
+                android:name="from"
+                app:argType="string"/>
+
+        </action>
+    </fragment>
+
+        <fragment
+            android:id="@+id/quizFragment"
+            android:name="com.example.sciencequest.User.Quiz.QuizFragment"
+            android:label="Quiz"
+            tools:layout="@layout/fragment_quiz" >
+            <action
+                android:id="@+id/action_quizFragment_to_resultFragment"
+                app:destination="@id/resultFragment" >
+                <argument
+                    android:name="score"
+                    app:argType="integer"/>
+                <argument
+                    android:name="totalQuestions"
+                    app:argType="integer"/>
+
+                <argument
+                    android:name="quizId"
+                    app:argType="string"/>
+                <argument
+                    android:name="lessonId"
+                    app:argType="string"/>
+
+                <argument
+                    android:name="topic"
+                    app:argType="string"/>
+
+                <argument
+                    android:name="category"
+                    app:argType="string"/>
+
+                <argument
+                    android:name="from"
+                    app:argType="string"/>
+
+            </action>
+
+            <action
+                android:id="@+id/action_quizFragment_to_quizSettingsFragment"
+                app:destination="@id/quizSettingsFragment">
+                <argument
+                    android:name="currentProgress"
+                    app:argType="integer" />
+                <argument
+                    android:name="totalQuestions"
+                    app:argType="integer" />
+
+            </action>
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/quizSettingsFragment"
+            android:name="com.example.sciencequest.User.Quiz.QuizSettingsFragment"
+            android:label="SettingsFragment"
+            tools:layout="@layout/fragment_quiz_settings" >
+            <argument
+                android:name="currentProgress"
+                app:argType="integer" />
+            <argument
+                android:name="totalQuestions"
+                app:argType="integer" />
+
+        </fragment>
+
+
+    <fragment
+        android:id="@+id/rankingFragment"
+        android:name="com.example.sciencequest.User.Ranking.RankingFragment"
+        android:label="fragment_ranking"
+        tools:layout="@layout/fragment_ranking" />
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.sciencequest.User.Quiz.ResultFragment"
+        android:label="ResultFragment" >
+        <action
+            android:id="@+id/action_resultFragment_to_quizFragment"
+            app:destination="@id/quizFragment">
+            <argument
+                android:name="quizId"
+                app:argType="string"/>
+            <argument
+                android:name="lessonId"
+                app:argType="string"/>
+
+            <argument
+                android:name="topic"
+                app:argType="string"/>
+
+            <argument
+                android:name="category"
+                app:argType="string"/>
+
+        </action>
+        <action
+            android:id="@+id/action_resultFragment_to_lessonListFragment"
+            app:destination="@id/lessonListFragment" >
+            <argument
+                android:name="category"
+                app:argType="string" />
+            <argument
+                android:name="topic"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_resultFragment_to_quizzesFragment"
+            app:destination="@id/quizzesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminQuizListFragment"
+        android:name="com.example.sciencequest.Admin.AdminQuiz.AdminQuizListFragment"
+        android:label="Quiz List"
+        tools:layout="@layout/fragment_admin_quiz_list">
+        <action
+            android:id="@+id/action_quizListFragment_to_quizDetailFragment"
+            app:destination="@id/adminQuizDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminQuizDetailFragment"
+        android:name="com.example.sciencequest.Admin.AdminQuiz.AdminQuizDetailFragment"
+        android:label="Quiz Detail"
+        tools:layout="@layout/fragment_admin_quiz_detail">
+    <argument
+        android:name="quiz"
+        app:argType="com.example.sciencequest.Admin.AdminQuiz.AdminQuiz" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizzesFragment"
+        android:name="com.example.sciencequest.User.Quiz.QuizSelection.QuizzesFragment"
+        android:label="QuizzesFragment" >
+        <argument
+            android:name="selectedFilter"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_quizzesFragment_to_quizDetailFragment"
+            app:destination="@id/quizDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/achievementsBadgesFragment"
+        android:name="com.example.sciencequest.User.Achievements.AchievementsBadgesFragment"
+        android:label="AchievementsBadgesFragment" />
+
+    <fragment
+        android:id="@+id/fragment_add_topic"
+        android:name="com.example.sciencequest.Admin.AdminLessonLibrary.AddTopicFragment"
+        android:label="Add Topic"
+        tools:layout="@layout/fragment_add_topic">
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/editTopicFragment"
+        android:name="com.example.sciencequest.Admin.AdminLessonLibrary.EditTopicFragment"
+        android:label="Edit Lesson">
+        <argument
+            android:name="branch"
+            app:argType="string" />
+        <argument
+            android:name="topic"
+            app:argType="string" />
+        <argument
+            android:name="lessonId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminLessonListFragment"
+        android:name="com.example.sciencequest.Admin.AdminLessonLibrary.AdminLessonListFragment"
+        android:label="AdminLessonListFragment" >
+        <action
+            android:id="@+id/action_adminLessonListFragment_to_editTopicFragment"
+            app:destination="@id/editTopicFragment" />
+        <action
+            android:id="@+id/action_adminLessonListFragment_to_fragment_add_topic"
+            app:destination="@id/fragment_add_topic" />
+    </fragment>
+
+</navigation>

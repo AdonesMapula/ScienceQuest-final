@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Admin.ProfileAdmin.AdminProfileEditFragment">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/backbtn_foreground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
+
+    <!-- Profile Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserratalternates_medium"
+        android:text="Profile"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toEndOf="@id/backButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!-- Input Fields -->
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText">
+
+        <!-- Username -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/blueAccent"
+            style="@style/TextInputLayoutColors"
+            app:boxStrokeWidth="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratalternates_medium"
+                android:hint="Username"
+                android:textColor="@color/blueAccent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- First Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/blueAccent"
+            style="@style/TextInputLayoutColors"
+            app:boxStrokeWidth="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/firstNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratalternates_medium"
+                android:textColor="@color/blueAccent"
+                android:hint="First Name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Last Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/blueAccent"
+            style="@style/TextInputLayoutColors"
+            app:boxStrokeWidth="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lastNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratalternates_medium"
+                android:textColor="@color/blueAccent"
+                android:hint="Last Name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            style="@style/TextInputLayoutColors"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/blueAccent"
+            app:boxStrokeWidth="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:fontFamily="@font/montserratalternates_medium"
+                android:textColor="@color/blueAccent"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/blueAccent"
+            style="@style/TextInputLayoutColors"
+            app:boxStrokeWidth="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratalternates_medium"
+                android:textColor="@color/blueAccent"
+                android:hint="Password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Avatar Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Select Avatar"
+            android:fontFamily="@font/montserratalternates_medium"
+            android:textColor="@color/blueButton"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <GridLayout
+            android:id="@+id/avatarGrid"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowCount="4"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/avatar1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="4dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/female1"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/avatar2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="4dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/female2"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/avatar3"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="4dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/male1"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/avatar4"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="4dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/male2"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/avatar5"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="4dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/female3"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/avatar6"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="4dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/girl1"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/avatar7"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="4dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/boy1"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/avatar8"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="4dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/boy2"
+                android:scaleType="centerCrop" />
+
+        </GridLayout>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/saveChangesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/yellowMain"
+            android:fontFamily="@font/montserratalternates_medium"
+            android:text="Save Changes"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/home_ic2"
+        android:title="Home"
+        />
+    <item
+        android:id="@+id/quizSelectionFragment"
+        android:icon="@drawable/quest_ic2"
+        android:title="Quest"
+        />
+    <item
+        android:id="@+id/rankingFragment"
+        android:icon="@drawable/ranking_ic2"
+        android:title="Ranking"
+       />
+    <item
+        android:id="@+id/userProfileFragment"
+        android:icon="@drawable/profile_ic2"
+        android:title="Profile"
+
+        />
+</menu>

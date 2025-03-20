@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:paddingBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="TODO"
+            android:src="@drawable/backbtn_foreground" />
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/montserratalternates_semibold"
+            android:text="Quiz Details"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginRight="50dp"
+            android:layout_gravity="bottom"
+            android:textColor="@color/black33"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Quiz Title"
+            android:alpha=".8"
+            android:layout_marginTop="4dp"
+            android:textColorHint="@color/black33"
+            app:boxStrokeErrorColor="@color/red"
+            app:errorEnabled="false"
+            app:errorIconDrawable="@null"
+            app:errorTextColor="@color/red"
+            app:startIconTint="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextQuizTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratalternates_semibold"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:lines="2"
+                android:gravity="top"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Quiz Description"
+            android:alpha=".8"
+            android:textColorHint="@color/black33"
+            app:boxStrokeErrorColor="@color/red"
+            app:errorEnabled="false"
+            app:errorIconDrawable="@null"
+            app:errorTextColor="@color/red"
+            app:startIconTint="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextQuizDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratalternates_semibold"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:gravity="top"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+            <Button
+                android:id="@+id/buttonSaveQuiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/blueButton"
+                android:text="Save Quiz"
+                android:layout_weight="1"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/white"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/buttonAddQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@android:color/transparent"
+                android:text="Add Question"
+                android:layout_weight="1"
+                app:cornerRadius="10dp"
+                android:textColor="@color/blueButton"
+                app:strokeColor="@color/blueButton"
+                app:strokeWidth="2dp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewQuestions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

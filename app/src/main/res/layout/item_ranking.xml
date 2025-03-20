@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:radius="8dp"
+    android:backgroundTint="#D7F5FF"
+    android:background="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="15dp"
+    android:elevation="1dp">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="16dp">
+
+        <!-- Rank -->
+        <TextView
+            android:id="@+id/rankTextView"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/rank_circle"
+            android:gravity="center"
+            android:text="4"
+            android:layout_centerVertical="true"
+            android:textSize="13sp"
+            android:textColor="#333333"
+            android:alpha=".5"
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_marginEnd="12dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/profile_container"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/user_profile_bg"
+            android:gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:layout_toRightOf="@+id/rankTextView">
+
+            <ImageView
+                android:id="@+id/rankingProfile"
+                android:layout_width="19.72dp"
+                android:layout_height="19.72dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="2dp"
+                android:src="@drawable/sample_chara" />
+        </LinearLayout>
+
+        <!-- Username -->
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:alpha=".5"
+            android:fontFamily="@font/montserratalternates_semibold"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/profile_container"
+            />
+
+        <!-- Total Score -->
+        <TextView
+            android:id="@+id/totalScoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100 pts."
+            android:textColor="#F3CB54"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserratalternates_semibold"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

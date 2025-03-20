@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="96dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:paddingBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="60dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="TODO"
+                android:src="@drawable/backbtn_foreground" />
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/montserratalternates_semibold"
+                android:text="Edit Lesson"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="50dp"
+                android:layout_gravity="bottom"
+                android:textColor="@color/black33"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Branch"
+                android:fontFamily="@font/montserratalternates_semibold"
+                android:textColor="@color/black33"
+                android:alpha=".8"/>
+
+            <Spinner
+                android:id="@+id/spinner_branch"
+                android:layout_width="match_parent"
+                android:layout_marginTop="4dp"
+                android:layout_height="wrap_content" />
+
+
+                <!-- Topic Selection -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Topic"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserratalternates_semibold"
+                    android:textColor="@color/black33"
+                    android:alpha=".8"/>
+            <Spinner
+                android:id="@+id/spinner_existing_topics"
+                android:layout_width="match_parent"
+                android:layout_marginTop="4dp"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Topic Description"
+                android:alpha=".8"
+                android:textColorHint="@color/black33"
+                app:boxStrokeErrorColor="@color/red"
+                app:errorEnabled="false"
+                android:layout_marginTop="8dp"
+                app:errorIconDrawable="@null"
+                app:errorTextColor="@color/red"
+                app:startIconTint="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_topic_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratalternates_semibold"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:gravity="top"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Lesson Title"
+                android:alpha=".8"
+                android:layout_marginTop="4dp"
+                android:textColorHint="@color/black33"
+                app:boxStrokeErrorColor="@color/red"
+                app:errorEnabled="false"
+                app:errorIconDrawable="@null"
+                app:errorTextColor="@color/red"
+                app:startIconTint="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_lesson_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratalternates_semibold"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:lines="2"
+                    android:gravity="top"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Lesson Description"
+                android:alpha=".8"
+                android:textColorHint="@color/black33"
+                app:boxStrokeErrorColor="@color/red"
+                app:errorEnabled="false"
+                app:errorIconDrawable="@null"
+                app:errorTextColor="@color/red"
+                app:startIconTint="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_lesson_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratalternates_semibold"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:gravity="top"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Add New Topic Option -->
+            <CheckBox
+                android:id="@+id/input_lesson_enabled"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:checked="true"
+                app:buttonTint="@color/blueButton"
+                android:fontFamily="@font/montserratalternates_semibold"
+                android:alpha=".8"
+                android:padding="0dp"
+                android:layout_marginTop="8dp"
+                android:textSize="12sp"
+                android:textColor="@color/black33"
+                android:text="Enable Video" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Video URL"
+                android:alpha=".8"
+                android:layout_marginTop="8dp"
+                android:textColorHint="@color/black33"
+                app:boxStrokeErrorColor="@color/red"
+                app:errorEnabled="false"
+                app:errorIconDrawable="@null"
+                app:errorTextColor="@color/red"
+                app:startIconTint="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_video_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratalternates_semibold"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:lines="2"
+                    android:gravity="top"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_vertical">
+                <!-- Topic Selection -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Quiz"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserratalternates_semibold"
+                    android:textColor="@color/black33"
+                    android:alpha=".8"/>
+                <!-- Add New Topic Option -->
+                <CheckBox
+                    android:id="@+id/input_quiz_enabled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:checked="true"
+                    app:buttonTint="@color/blueButton"
+                    android:fontFamily="@font/montserratalternates_semibold"
+                    android:alpha=".8"
+                    android:padding="0dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/black33"
+                    android:text="Enable Quiz" />
+            </LinearLayout>
+
+
+            <Spinner
+                android:layout_marginTop="4dp"
+                android:id="@+id/spinner_quiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:id="@+id/input_phet_enabled"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:checked="true"
+                android:layout_marginTop="16dp"
+                app:buttonTint="@color/blueButton"
+                android:fontFamily="@font/montserratalternates_semibold"
+                android:alpha=".8"
+                android:padding="0dp"
+                android:textSize="12sp"
+                android:textColor="@color/black33"
+                android:text="Enable Phet Simulation" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Phet Title"
+                android:alpha=".8"
+                android:layout_marginTop="8dp"
+                android:textColorHint="@color/black33"
+                app:boxStrokeErrorColor="@color/red"
+                app:errorEnabled="false"
+                app:errorIconDrawable="@null"
+                app:errorTextColor="@color/red"
+                app:startIconTint="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextPhetTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratalternates_semibold"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:lines="2"
+                    android:gravity="top"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Phet URL"
+                android:alpha=".8"
+                android:textColorHint="@color/black33"
+                app:boxStrokeErrorColor="@color/red"
+                app:errorEnabled="false"
+                app:errorIconDrawable="@null"
+                app:errorTextColor="@color/red"
+                app:startIconTint="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_phet_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratalternates_semibold"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:lines="2"
+                    android:gravity="top"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Buttons -->
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="Update Lesson"
+                app:cornerRadius="20dp"
+                android:fontFamily="@font/montserratalternates_semibold"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/buttonDelete"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                app:cornerRadius="20dp"
+                android:text="Delete Lesson"
+                android:backgroundTint="@color/red"
+                android:fontFamily="@font/montserratalternates_semibold"
+                android:textColor="@color/white"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</ScrollView>
